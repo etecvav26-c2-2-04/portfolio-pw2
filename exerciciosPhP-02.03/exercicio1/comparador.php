@@ -12,6 +12,6 @@
     } else 
     {
         echo $numero . " não está entre 100 e 200";
-        //Se as duas comparações não são verdadeiras, exibe outra mensagem
+        //Se uma das duas comparações não são verdadeiras, exibe outra mensagem
     }
 ?>
