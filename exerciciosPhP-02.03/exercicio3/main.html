@@ -22,6 +22,29 @@ O programa deve mostrar o resultado da operação.
         <input type="number" name="n2" step="any" required>
         <br> <br>
         
+        <label> Insira um operador: </label>
+        <br>
+
+        <input type="radio" name="operador" id="1" value="1" required>
+        <label for="1">Soma </label>
+        <br>
+
+        <input type="radio" name="operador" id="2" value="2" required>
+        <label for="2"> Subtração </label>
+        <br>
+
+        <input type="radio" name="operador" id="3" value="3" required>
+        <label for="3"> Multiplicação </label>
+        <br>
+
+        <input type="radio" name="operador" id="4" value="4" required>
+        <label for="4">Divisão</label>
+        <!-- 
+        O input type="radio" serve para permitir que o usuario utilize apenas um operador por vez,
+        use o mesmo "name" nos inputs para o servidor entender que apenas uma daquelas opções sera marcadas
+        -->
+        <br> <br>
+        
         <button> Enviar </button>
         <br><br>
     </form>
