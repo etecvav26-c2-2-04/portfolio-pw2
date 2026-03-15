@@ -86,8 +86,3 @@ Um ano é bissexto se:
 - É múltiplo de 400  
 ou  
 - É múltiplo de 4 e não é múltiplo de 100  
-
----
-- É múltiplo de 4 e não é múltiplo de 100  
-
----
