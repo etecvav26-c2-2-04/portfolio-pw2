@@ -4,9 +4,12 @@
 
 A partir da observação da progressão de dificuldade a partir da progressão númerica do exercício, a divisão de tarefas ficou da seguinte forma:
 **Gabriel Henrique** exercício numerados em par (2, 4, 6...)
+
 **João Gabriel** exercício numerados em impar (1, 3, 5...)
 
-**as atividades propostas pelo professor não serão feitas totalmente independentes da outra dupla, mas serão documentadas da seguinte maneira**
+**As atividades propostas pelo professor não serão feitas totalmente independentes da outra dupla, mas serão documentadas da seguinte maneira**
+
+---
 
 ### Exercício 1 - Intervalo entre 100 e 200
 Faça um programa que receba um número e diga se este número está no intervalo entre 100 e 200.
