@@ -5,16 +5,18 @@ $num1 = $_POST["n1"];
 $num2 = $_POST["n2"];
 $valor = $_POST["value"];
 
-if( $valor = "+"){
+if( $valor = "+")
+{
     $resultado = $num1+$num2;
 }
-if( $valor = "-"){
+else if( $valor = "-")
+{
     $resultado = $num1-$num2;
 }
-if( $valor = "*"){
+else if( $valor = "*"){
     $resultado = $num1*$num2;
 }
-if( $valor = "/"){
+else( $valor = "/"){
     $resultado = $num1/$num2;
 }
 
