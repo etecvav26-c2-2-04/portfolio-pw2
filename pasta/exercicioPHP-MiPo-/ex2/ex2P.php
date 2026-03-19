@@ -1,27 +1,18 @@
 <?php
-include("ex2H.php");
+include("ex2H.php"); //liga o html ao php
+
+$temp = $_POST["temp"]; //associa a variavel do php a do html
+$escala = $_POST["escala"]; //associa a variavel do php a do html
 
 
-$temp = $_POST["temp"]; 
-$escala = $_POST["escala"];
-
-
-if ($escala = "f" && $escala = "F"){ 
-   $converter = 5/9*($temp-32); 
-} else { 
-    $converter = ($temp*9/5)+32; 
+if ($escala = "f" && $escala = "F") //se a escala de temperatura estiver em fahrenheit
+{ 
+   $converter = 5/9*($temp-32); //formula para converter fahrenheit em celsius
 }
-echo $converter." é a temperatura apos a conversao"; 
-
-
-
-
-
-
-
-
-
-
-
+else //se nao estiver em fahrenheit
+{ 
+    $converter = ($temp*9/5)+32; //formula para converter celsius em fahrenheit
+}
+echo $converter." é a temperatura apos a conversao"; //mostra a temperatura apos a conversao
 
 ?>
