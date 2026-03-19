@@ -1,5 +1,5 @@
 <?php
-    include("main.html");
+    include("main.php");
 
     $numeros = $_GET['num']; // Pega todos os input nomeados num e transforma em uma lista
     $numpositivo = [];
