@@ -1,3 +1,19 @@
+<!--
+Data: 18/03/2026
+Autor: Gabriel Henrique
+Objetivo: Aprofundar os conhecimentos em HTML e PHP
+
+Exercício 4 - Triângulo Numérico
+Leia um número n e imprima n linhas no seguinte formato (exemplo para n = 6):
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
