@@ -21,40 +21,35 @@ Faça um programa que leia dois números e um operador ("+","-","*" ou "/")
 </head>
 <body>
     
-<form action="ex3.php" method="post">
+    <form action="ex3.php" method="post">
+    
+        <label>Insira o primero numero:</label>
+        <input type="text" name="n1" required>
+        
+        <br><br>
+        
+          <label>Qual operação deve ser realizada:</label>
+        <label>+</label>
+        <input name = "value" type="radio" value="+" required>
 
-<label>Insira o primero numero:</label>
-<input type="text" name="n1">
+        <label>-</label>
+        <input name = "value" type="radio" value="-" required>
 
-<br><br>
+        <label>*</label>
+        <input name = "value" type="radio" value="*" required>
 
-<label>Qual operação deve ser realizada:</label>
-<input type="button" value="+">
-<input type="button" value="-">
-<input type="button" value="*">
-<input type="button" value="/">
-
-<br><br>
-
-<Label>Insira o segundo numero</Label>
-<input type="text" name="n2">
-<br><br>
-
-<button>Enviar</button>
-
-
-
-
-
-
-</form>
-
-
-
-
-
-
-
+        <label>/</label>
+        <input name = "value" type="radio" value="/" required>
+        
+        <br><br>
+        
+        <Label>Insira o segundo numero</Label>
+        <input type="text" name="n2" required>
+        <br><br>
+        
+        <button>Enviar</button>
+        
+    </form>
 
 </body>
 </html>
