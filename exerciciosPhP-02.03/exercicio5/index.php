@@ -1,5 +1,5 @@
 <?php
-    include ("main.html"); //Inclui o código HTML na página PHP, para melhorar a experiência de usuário
+    include ("main.php"); //Inclui o código HTML na página PHP, para melhorar a experiência de usuário
     require_once ("functionFatorial.php"); //Vai requerir o código incluso no arquivo
 
     $n1 = fatorial($_GET["n1"]);
