@@ -20,7 +20,7 @@ Fórmula: C = 5/9 x (F - 32)
 </head>
 <body>
     
-<form action="ex2.php" method="post">  
+<form action="ex2P.php" method="post">  
 
 <label>Insira uma temperatura</label>  
 <input type="text" name="temp">  
