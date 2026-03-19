@@ -1,5 +1,5 @@
 <?php
-    include("main.html"); //Inclui o formulário feito em HTML para a página em PHP
+    include("main.php"); //Inclui o formulário feito em HTML para a página em PHP
 
     $numero = $_POST["numero"];
     /*Define que a variável numero terá seu valor definido a partir do input numero no HTML,
