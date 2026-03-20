@@ -14,7 +14,7 @@
         //mostrando o valor para o usuario
         echo "O valor em Fahrenheit é: ".$conversao;
       //aqui também pego a posição 0 da variavel grau e transfomo em caixa alta pra evitar problemas
-      }elseif(strtoupper($grau[0]) == "F"){
+      }else{
         //calculo para converter para Celcius
         $conversao = ($numero - 32) * 5/9;
         //mostrando o valor para o usuario
