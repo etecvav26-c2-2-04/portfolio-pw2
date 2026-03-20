@@ -17,7 +17,7 @@ Depois, o programa deve converter para a outra unidade.
   <title>Conversor de temperaturas</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="script.php" method="post">
       <!-- grau -->
       <label for="">Insira o Grau:</label>  
       <br>
