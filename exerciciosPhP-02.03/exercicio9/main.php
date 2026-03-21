@@ -6,7 +6,7 @@
 <body>
     <h1> Calculadora média aritmética </h1>
 
-    <form action="main.php" method="POST">
+    <form action="index.php" method="POST">
 
         <label>Insira os valores:</label>
         <br>
