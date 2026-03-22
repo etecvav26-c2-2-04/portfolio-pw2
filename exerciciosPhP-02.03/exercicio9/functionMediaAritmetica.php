@@ -4,8 +4,8 @@
         $soma = 0;
         foreach ($numeros as $numero)
         {
-            $soma = $numero + $soma; 
-            //Por algum motivo que eu desconheço, ele não estava entendendo =+
+            $soma += $numero; 
+            //O motivo do erro era a sintaxe do código
         }
 
         $resultado = $soma / count($numeros); 
