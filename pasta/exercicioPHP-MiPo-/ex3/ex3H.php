@@ -1,4 +1,4 @@
-<!--
+<!---
 Data: 19/03
 Nome: Poliany Chaves de Souza
 Objetivo: Aprofundar os conhecimentos em HTML e PHP
@@ -6,7 +6,12 @@ Objetivo: Aprofundar os conhecimentos em HTML e PHP
 Exercício 3 - Calculadora Aritmética
 Faça um programa que leia dois números e um operador ("+","-","*" ou "/") 
 -O programa deve mostrar o resultado da operação
--->
+
+--->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,27 +21,34 @@ Faça um programa que leia dois números e um operador ("+","-","*" ou "/")
 </head>
 <body>
     
-    <form action="ex3P.php" method="post">
-    
-        <label>Insira o primero numero:</label> <!--Insere um texto-->
-        <input type="text" name="n1" step="any" required> <!--Insere uma caixa de texto obrigatoria que recebe numeros decimais-->
-        
-        <br><br> <!--Quebra de linha-->
-        
-        <label>Qual operação deve ser realizada:</label> <!--Insere um texto-->
-        <input type="button" value="+">
-        <input type="button" value="-">
-        <input type="button" value="*">
-        <input type="button" value="/">
+    <form action="ex3.php" method="post">
+
+        <label>Insira o primero numero:</label>
+        <input type="text" name="n1">
+        <br><br>
+
+         <label>Qual operação deve ser realizada:</label>
+        <label>+</label>
+        <input name = "value" type="radio" value="+" required>
+
+        <label>-</label>
+        <input name = "value" type="radio" value="-" required>
+
+        <label>*</label>
+        <input name = "value" type="radio" value="*" required>
+
+        <label>/</label>
+        <input name = "value" type="radio" value="/" required>
         
         <br><br>
         
-        <Label>Insira o segundo numero</Label> <!--Insere um texto-->
-        <input type="text" name="n2" step="any" required> <!--Insere uma caixa de texto obrigatoria que recebe numeros decimais-->
+        <Label>Insira o segundo numero</Label>
+        <input type="text" name="n2" required>
         <br><br>
         
         <button>Enviar</button>
         
+
     </form>
 
 </body>
