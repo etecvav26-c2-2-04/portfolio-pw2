@@ -20,30 +20,21 @@ Fórmula: C = 5/9 x (F - 32)
 </head>
 <body>
     
-<form action="ex2P.php" method="post">  
-
-<label>Insira uma temperatura</label>  
-<input type="text" name="temp">  
-
-<br><br> 
-
-<label>Informe a escala de temperatura</label> 
-<input type="text" name="escala">  
-
-<br><br>  
-
-<button>Enviar</button>  
-
-
-
-
-
-
-</form>
-
-
-
-
+    <form action="ex2P.php" method="post"> <!--Cria um formulario-->
+    
+        <label>Insira uma temperatura</label> <!--Insere um texto-->
+        <input type="text" name="temp" required> <!--Insere uma caixa de texto obrigatoria-->
+        
+        <br><br> <!--Quebra de linha-->
+        
+        <label>Informe a escala de temperatura</label> <!--Insere um texto-->
+        <input type="text" name="escala" required> <!--Insere uma caixa de texto obrigatoria-->
+        
+        <br><br> <!--Quebra de linha-->
+        
+        <button>Enviar</button> <!--Cria um botao-->
+    
+    </form>
 
 </body>
 </html>
