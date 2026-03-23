@@ -16,7 +16,7 @@ Faça um programa que receba um númerc e diga se este número está no interval
 </head>
 <body>
     
-    <form action="ex1.php" method="post"> <!--Cria um formulario-->
+    <form action="ex1P.php" method="post"> <!--Cria um formulario-->
         
         <label>Insira um numero:</label> <--Insere um texto-->
         <input type="text" name="n1" step="any" required> <--Insere uma caixa de texto que recebe numeros racionais(Required faz com que seja obrigatorio inserir um numero)-->
