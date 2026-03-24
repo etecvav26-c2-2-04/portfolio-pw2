@@ -10,19 +10,19 @@
     <form action="ex5P.php" method="post">
         <label>Insira o primeiro numero:</label>
         <input type="text" name="n1" required>
-        <br>
+        <br><br>
 
         <label>Insira o segundo numero:</label>
         <input type="text" name="n2" required>
-        <br>
+        <br><br>
 
         <label>Insira o terceiro numero:</label>
         <input type="text" name="n3" required>
-        <br>
+        <br><br>
 
         <label>Insira o quarto numero:</label>
         <input type="text" name="n4" required>
-        <br>
+        <br><br>
 
         <label>Insira o quinto numero:</label>
         <input type="text" name="n5" required>
