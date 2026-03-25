@@ -5,19 +5,19 @@ $num1 = $_POST["n1"];
 $num2 = $_POST["n2"];
 $valor = $_POST["value"];
 
-if( $valor = "+") //se a variavel valor for +
+if( $valor == "+") //se a variavel valor for +
 {
     $resultado = $num1+$num2; //resultado é uma conta de adição das variaveis de numero
 }
-else if( $valor = "-") //se a variavel valor for -
+else if( $valor == "-") //se a variavel valor for -
 {
     $resultado = $num1-$num2; //resultado é uma conta subtração das variaveis de numero
 }
-else if( $valor = "*") //se a variavel valor for *
+else if( $valor == "*") //se a variavel valor for *
 {
     $resultado = $num1*$num2; //resultado é uma conta de multiplicação das variaveis de numero
 }
-else if( $valor = "/") //senão
+else //senão
 {
     $resultado = $num1/$num2; //resultado é uma conta de divisão das variaveis de numero
 }
