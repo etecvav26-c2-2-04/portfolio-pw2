@@ -10,7 +10,7 @@ Um vetor com números positivos
 Um vetor com números negativos
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Números positivos e negativos</title>

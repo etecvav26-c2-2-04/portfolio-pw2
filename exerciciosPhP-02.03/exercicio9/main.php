@@ -8,7 +8,7 @@ Crie uma função:
 function media($v)
 Que receba uma lista de números reais e retorne a média aritmética.
 -->
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Média aritmética</title>

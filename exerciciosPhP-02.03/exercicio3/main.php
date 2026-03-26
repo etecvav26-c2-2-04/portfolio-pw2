@@ -8,7 +8,7 @@ Faça um programa que leia dois números e um operador ("+", "-", "*" ou "/").
 O programa deve mostrar o resultado da operação.
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title> Calculadora aritmética </title>
