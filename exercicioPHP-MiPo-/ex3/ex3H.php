@@ -21,7 +21,7 @@ Faça um programa que leia dois números e um operador ("+","-","*" ou "/")
 </head>
 <body>
     
-    <form action="ex3.php" method="post">
+    <form action="ex3P.php" method="post">
 
         <label>Insira o primero numero:</label>
         <input type="text" name="n1">
