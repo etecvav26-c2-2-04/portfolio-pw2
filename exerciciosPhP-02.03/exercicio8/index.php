@@ -18,6 +18,7 @@ Crie uma função soma(n) que receba um número inteiro e retorne a soma de 0 at
 </head>
 <body>
     <form action="script.php" method="post">
+        <h1>Soma de numeros</h1>
         <label>
         Insira um numero:<br>
         <input type="number" name="numero" placeholder="12">
