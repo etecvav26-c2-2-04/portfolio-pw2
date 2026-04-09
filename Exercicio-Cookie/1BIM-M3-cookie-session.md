@@ -1,7 +1,7 @@
 
-Exercício 1 — Diferença entre cookies e sessions no PHP
+# Exercício 1 — Diferença entre cookies e sessions no PHP
 
- Onde os dados são armazenados:
+ ## Onde os dados são armazenados:
 
 Cookies: armazenados no navegador do usuário (lado cliente).
 Sessions: armazenadas no servidor, sendo identificado por um ID de sessão (geralmente guardado em um cookie).
@@ -21,16 +21,16 @@ autenticação de usuários
 armazenamento de dados sensíveis
 controle de estado da aplicação
 
-Exercício 2 — Aplicação em uma loja virtual
+## Exercício 2 — Aplicação em uma loja virtual
 
  Manter o usuário logado:
 
-Usar sessions
+Usar **sessions**:
 Justificativa: dados de autenticação ficam no servidor → mais seguro contra manipulação.
 
  Armazenar itens temporários no carrinho:
 
-Usar sessions
+Usar `sessions`
 Justificativa:
 dados podem ser mais complexos (arrays de produtos)
 evita que o usuário altere valores manualmente
