@@ -1,9 +1,3 @@
-Alunos:
-Gabriel Henrique
-João Gabriel
-Milena Kury
-Poliany Chaves
-2°C²
 
 Exercício 1 — Diferença entre cookies e sessions no PHP
 
