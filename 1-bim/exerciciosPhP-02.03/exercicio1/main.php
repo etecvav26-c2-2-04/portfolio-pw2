@@ -1,0 +1,24 @@
+<!--
+Data: 15/03/2026
+Autor: João Gabriel
+Objetivo: Aprofundar os conhecimentos em HTML e PHP
+
+Exercício 1 - Intervalo entre 100 e 200
+Faça um programa que receba um número e diga se este número está no intervalo entre 100 e 200.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title> Comparador </title>
+</head>
+<body>
+    <form action="comparador.php" method="post">
+        <label> Insira um número:</label>
+        <input type="number" name="numero" step="any" required> <!-- step="any" permite o usuário a usar números decimais -->
+        <button> Enviar </button>
+        <br><br>
+    </form>
+</body>
+</html>
