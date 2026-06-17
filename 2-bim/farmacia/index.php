@@ -6,7 +6,9 @@ require_once("includes/footer.php");
 
 $sql = "SELECT * FROM produtos";
 $stmt = $pdo->prepare($sql);
+
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+echo "<pre>"; print_r($produtos); echo "</pre>";
 
 ?>
 <h1>Farmácia VAV - Estoque</h1>
