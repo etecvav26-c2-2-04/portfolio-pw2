@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DESGOSTO | Anti-Romance Club</title>
-    <!-- Tipografia Minimalista e de Alto Impacto (Inter e Oswald) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -343,7 +342,6 @@
         <div class="menu-icon" onclick="alert('Menu Editorial Expandido')">Menu</div>
     </header>
 
-    <!-- BANNER HERO EDITORIAL -->
     <section class="hero-editorial">
         <div class="hero-content">
             <h1>O amor destrói,<br>o estilo reconstrói.</h1>
@@ -379,7 +377,6 @@
                 <div class="product-tag">Estampa em Silk Relevo</div>
             </div>
 
-            <!-- PRODUTO 3 -->
             <div class="product-card">
                 <div class="product-image-wrapper">
                     <span class="product-image-placeholder">[ Fotografia Editorial ]</span>
@@ -394,13 +391,11 @@
         </div>
     </section>
 
-    <!-- O MANIFESTO DA MARCA (ESTILO DESGOSTO) -->
     <section id="manifesto" class="manifesto">
         <h2>O Manifesto</h2>
         <p>Não romantizamos o erro, vestimos a consequência. A DESGOSTO é o reflexo têxtil das noites em claro, dos términos não avisados e do ego reconstruído no asfalto. Roupa para quem cansa de ser trouxa, mas não cansa de se vestir bem.</p>
     </section>
 
-    <!-- FOOTER INSTITUCIONAL -->
     <footer id="suporte">
         <div class="footer-brand">DESGOSTO ©</div>
         
@@ -425,7 +420,7 @@
         </div>
 
         <div class="copyright">
-            <p>Desgosto Vestuário Corp. Todos os direitos reservados. Feito em 2026 para os corações de pedra.</p>
+            <p>Desgosto Vestuário Corp. Todos os direitos reservados: Gabriel H. Silva João G. S. Carvalho Milena K. Trindade Poliany C. Souza 2C² </p>
         </div>
     </footer>
 
