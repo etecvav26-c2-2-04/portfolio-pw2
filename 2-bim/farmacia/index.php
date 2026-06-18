@@ -28,10 +28,10 @@ require_once("includes/header.php");
             <?php foreach ($produtos as $p): ?>
             <tr>
                 <td data-label="ID"><?= $p['id'] ?></td>
-                <td data-label="Nome"><strong><?= htmlspecialchars($p['nome']) ?></strong></td>
-                <td data-label="Fabricante"><?= htmlspecialchars($p['fabricante']) ?></td>
-                <td data-label="Preço" class="preco">R$ <?= number_format($p['preco'], 2, ',', '.') ?></td>
-                <td data-label="Estoque"><?= $p['estoque'] ?> un.</td>
+                <td data-label="Nome"><strong><?= htmlspecialchars($p['Nome']) ?></strong></td>
+                <td data-label="Fabricante"><?= htmlspecialchars($p['Fabricante']) ?></td>
+                <td data-label="Preço" class="preco">R$ <?= number_format($p['Preco'], 2, ',', '.') ?></td>
+                <td data-label="Estoque"><?= $p['Estoque'] ?> un.</td>
                 <td data-label="Ações">
                     <a href="editar.php?id=<?= $p['id'] ?>" class="btn-acao btn-editar">Editar</a>
                     <a href="excluir.php?id=<?= $p['id'] ?>" class="btn-acao btn-excluir" onclick="return confirm('Tem certeza que deseja excluir este produto?')">Excluir</a>
