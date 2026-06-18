@@ -1,5 +1,6 @@
 
-   body {
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
     color: #333;
@@ -8,7 +9,7 @@
 }
 
 .navbar {
-    background-color: #00796b;
+    background-color: #9B1003;
     padding: 10px 15px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -42,7 +43,7 @@
 }
 
 h1 {
-    color: #00796b;
+    color: red;
     font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 20px;
@@ -52,7 +53,7 @@ h1 {
 .btn-cadastrar {
     display: block;
     text-align: center;
-    background-color: #009688;
+    background-color: #9B1003;
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -106,11 +107,11 @@ h1 {
 
 /* Estilos específicos para destacar informações no mobile */
 .tabela-produtos td strong {
-    color: #00796b;
+    color: #9B1003;
 }
 
 .preco {
-    color: #2e7d32;
+    color: #9B1003;
     font-weight: 600;
 }
 
@@ -135,15 +136,13 @@ h1 {
     margin-left: 10px;
 }
 
-
-
 @media (min-width: 768px) {
     body {
         padding: 30px;
     }
 
     .navbar {
-        background-color: #00796b;
+        background-color: #9B1003;
         padding: 10px 15px;
         border-radius: 8px;
         margin-bottom: 15px;
@@ -179,21 +178,21 @@ h1 {
     }
 
     .btn-cadastrar {
-        display: inline-block; /* Volta a ser um botão menor no canto */
+        display: inline-block; 
         font-size: 0.95rem;
     }
 
-    /* Resgata o comportamento padrão de tabela estruturada */
+
     .tabela-produtos {
         display: table;
     }
 
     .tabela-produtos thead {
-        display: table-header-group; /* Mostra o cabeçalho novamente */
+        display: table-header-group; 
     }
 
     .tabela-produtos tbody tr {
-        display: table-row; /* Linhas voltam ao normal */
+        display: table-row; 
         border: none;
     }
 
@@ -213,14 +212,14 @@ h1 {
     }
 
     .tabela-produtos th {
-        background-color: #00796b;
+        background-color: #9B1003;
         color: white;
         text-transform: uppercase;
         font-size: 13px;
         letter-spacing: 0.5px;
     }
 
-    /* Remove o texto duplicado gerado no mobile, se houver */
+
     .tabela-produtos td::before {
         display: none;
     }
