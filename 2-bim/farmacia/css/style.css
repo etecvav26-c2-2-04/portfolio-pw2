@@ -1,4 +1,12 @@
 
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 15px;
+}
+
 .navbar {
     background-color: #00796b;
     padding: 10px 15px;
@@ -25,9 +33,196 @@
     text-decoration: underline;
 }
 
-footer {
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+}
+
+h1 {
+    color: #00796b;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Botão de Cadastro adaptado para touch */
+.btn-cadastrar {
+    display: block;
     text-align: center;
-    margin-top: 30px;
-    font-size: 12px;
+    background-color: #009688;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Transformando a tabela em formato de Cards para Mobile */
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Esconde o cabeçalho original da tabela no mobile */
+.tabela-produtos thead {
+    display: none;
+}
+
+/* Cada linha vira um card individual */
+.tabela-produtos tbody tr {
+    display: block;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Faz cada célula se comportar como uma linha do card */
+.tabela-produtos td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border-bottom: 1px dashed #f0f0f0;
+    font-size: 14px;
+}
+
+.tabela-produtos td:last-child {
+    border-bottom: none; /* Remove a linha do último item (ações) */
+}
+
+/* Injeta o nome da coluna antes do valor usando o atributo implicitamente */
+.tabela-produtos td::before {
+    content: attr(data-label); /* Se quiser automatizar 100%, adicione data-label no HTML. Se não tiver, o layout ainda funciona */
+    font-weight: bold;
     color: #777;
+}
+
+/* Estilos específicos para destacar informações no mobile */
+.tabela-produtos td strong {
+    color: #00796b;
+}
+
+.preco {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* Botões de Ação otimizados para clique no celular */
+.btn-acao {
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-editar {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+.btn-excluir {
+    background-color: #ffebee;
+    color: #c62828;
+    margin-left: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+    body {
+        padding: 30px;
+    }
+
+    .navbar {
+        background-color: #00796b;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn-cadastrar {
+        display: inline-block; /* Volta a ser um botão menor no canto */
+        font-size: 0.95rem;
+    }
+
+    /* Resgata o comportamento padrão de tabela estruturada */
+    .tabela-produtos {
+        display: table;
+    }
+
+    .tabela-produtos thead {
+        display: table-header-group; /* Mostra o cabeçalho novamente */
+    }
+
+    .tabela-produtos tbody tr {
+        display: table-row; /* Linhas voltam ao normal */
+        border: none;
+    }
+
+    .tabela-produtos tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .tabela-produtos tbody tr:hover {
+        background-color: #f1f5f4;
+    }
+
+    .tabela-produtos th, 
+    .tabela-produtos td {
+        display: table-cell; /* Células voltam ao normal */
+        padding: 12px 15px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .tabela-produtos th {
+        background-color: #00796b;
+        color: white;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Remove o texto duplicado gerado no mobile, se houver */
+    .tabela-produtos td::before {
+        display: none;
+    }
+
 }
