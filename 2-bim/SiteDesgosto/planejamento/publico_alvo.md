@@ -19,7 +19,7 @@ O nosso público não está apenas comprando roupas; ele está buscando uma form
 
 * **Momento de Vida:** Passando por uma desilusão amorosa recente (término de namoro, rejeição ou o fim de um "quase algo").
 * **Estado Emocional:** Sentimentos de nostalgia, melancolia, solitude, mas também o desejo latente de "dar a volta por cima" e focar no amor-próprio.
-* **Canais de Consumo:** Altamente influenciados por aesthetics do TikTok, Pinterest e Instagram. Consumidores de playlists de música (indie, sad boy/sad girl, lo-fi, trap sentimental).
+* **Canais de Consumo:** Altamente influenciados por aesthetics do TikTok, Pinterest e Instagram.
 * **Estilo Visual Preferido:** Roupas que servem como uma "armadura de conforto". Preferência por modelagens *oversized* (moletom, camisetas largas) que trazem sensação de proteção, cores que refletem o humor (tons neutros, pastéis ou escuros) e estampas com frases minimalistas, poéticas ou com um toque de ironia/sarcasmo sobre o amor.
 
 ---
