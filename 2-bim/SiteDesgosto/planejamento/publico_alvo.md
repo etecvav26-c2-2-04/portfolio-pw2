@@ -4,16 +4,16 @@ Este documento detalha o perfil do cliente ideal da nossa marca de roupas, criad
 
 ---
 
-## 🎯 Perfil Demográfico
+## Perfil Demográfico
 
 * **Idade:** 13 a 19 anos (Adolescentes e jovens adultos).
 * **Gênero:** Unisex / Sem distinção de gênero (foco em modelagens confortáveis e universais).
 * **Localização:** Centros urbanos (com forte presença digital).
-* **Ocupação:** Estudantes (Ensino Fundamental II, Ensino Médio ou início da faculdade).
+* **Ocupação:** Focada principalmente para estudantes.
 
 ---
 
-## 🧠 Perfil Psicográfico (Comportamento e Sentimentos)
+## Perfil Psicográfico (Comportamento e Sentimentos)
 
 O nosso público não está apenas comprando roupas; ele está buscando uma forma de expressar o que sente e reconstruir sua identidade.
 
@@ -24,11 +24,11 @@ O nosso público não está apenas comprando roupas; ele está buscando uma form
 
 ---
 
-## 💡 Proposta de Valor da Marca
+## Proposta de Valor da Marca
 
 Para este público, a marca atua em duas frentes:
 
 1. **O Conforto do Luto:** Oferecer peças confortáveis para os dias em que o cliente só quer ficar no quarto ouvindo música triste.
 2. **O Recomeço:** Estimular a autoconfiança por meio do estilo, mostrando que o fim de um ciclo é o início de um guarda-roupa (e de uma vida) nova.
 
-> 📌 **Diretriz de Comunicação:** A linguagem da marca deve ser de acolhimento e cumplicidade, como um amigo que valida a dor do outro, mas sem incentivar comportamentos autodestrutivos. O foco é a expressão saudável dos sentimentos através da moda.
+> **Diretriz de Comunicação:** A linguagem da marca deve ser de acolhimento e cumplicidade, como um amigo que valida a dor do outro, mas sem incentivar comportamentos autodestrutivos. O foco é a expressão saudável dos sentimentos através da moda.
