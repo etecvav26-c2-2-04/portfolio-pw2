@@ -52,4 +52,6 @@ O `aria-label` fornece um rótulo ou nome descritivo diretamente para os leitore
 
 Explique por que o WAI-ARIA **não substitui** o HTML semântico e descreva uma situação em que seu uso seja necessário para melhorar a acessibilidade de uma página web.
 
+O WAI-ARIA **não substitui** o HTML semântico porque os elementos nativos do HTML (como `<button>`, `<nav>`, `<input>` ou `<main>`) já possuem comportamento, suporte a eventos de teclado (como foco via `Tab`, acionamento via `Enter` ou `Espaço`) e acessibilidade embutidos nativamente pelos navegadores. Os atributos ARIA apenas comunicam informações extras para tecnologias assistivas, mas não alteram o comportamento visual nem fornecem a funcionalidade nativa do elemento. Portanto, a boa prática exige usar HTML semântico sempre que possível e reservar o ARIA apenas como um complemento.
+
 ---
