@@ -1,4 +1,4 @@
-#Poliany C. Souza & João G. S. Carvalho 2C²
+### Poliany C. Souza & João G. S. Carvalho 2C²
 
 # 📚 Atividade – WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications)
 
