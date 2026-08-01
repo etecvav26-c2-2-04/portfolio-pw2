@@ -54,4 +54,7 @@ Explique por que o WAI-ARIA **não substitui** o HTML semântico e descreva uma 
 
 O WAI-ARIA **não substitui** o HTML semântico porque os elementos nativos do HTML (como `<button>`, `<nav>`, `<input>` ou `<main>`) já possuem comportamento, suporte a eventos de teclado (como foco via `Tab`, acionamento via `Enter` ou `Espaço`) e acessibilidade embutidos nativamente pelos navegadores. Os atributos ARIA apenas comunicam informações extras para tecnologias assistivas, mas não alteram o comportamento visual nem fornecem a funcionalidade nativa do elemento. Portanto, a boa prática exige usar HTML semântico sempre que possível e reservar o ARIA apenas como um complemento.
 
+**Situação em que o uso do WAI-ARIA é necessário:**
+O ARIA é indispensável para **componentes dinâmicos de interface**, como um *menu sanfona* (accordion), um *dropdown* ou um *menu responsivo (toggler)*. Nesses casos, a estrutura HTML nativa não tem como avisar dinamicamente ao leitor de tela se aquele menu está recolhido ou expandido conforme o usuário interage. A inclusão e alteração via JavaScript dos atributos `aria-expanded="false"` / `aria-expanded="true"` e `aria-controls="idDoMenu"` torna a mudança de estado perceptível para o usuário que utiliza leitor de tela.
+
 ---
