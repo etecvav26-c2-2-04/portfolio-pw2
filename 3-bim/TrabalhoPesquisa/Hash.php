@@ -35,22 +35,28 @@
         </div>
     </nav>
     <div class="container-sm">
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-                <label for="inputPassword6" class="col-form-label">Password</label>
+        <form method="post" name="SenhaHash">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">senha indecifravel</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </span>
+                </div>
             </div>
-            <div class="col-auto">
-                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-            </div>
-            <div class="col-auto">
-                <span id="passwordHelpInline" class="form-text">
-                    <button class="btn btn-primary" type="submit">Enviar</button>
-                </span>
-            </div>
-        </div>
-        ''
-        
+        </form>
+    </div>
+</body>
+</html>
 
+<?php 
+
+?>
     </div>
 </body>
 </html>
