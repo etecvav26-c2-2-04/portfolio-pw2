@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>CriptografiaHash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-
             <a class="navbar-brand" href="Pesquisa.php">Criptografias</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,51 +16,61 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav">
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">OpenSSL</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sodium</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Hash</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Crypt</a>
                     </li>
-
                 </ul>
-
             </div>
         </div>
     </nav>
 
-    <div class="container-sm">
+    <div class="container mt-4">
+        <div class="card text-bg-ligth mb-4">
+            <div class="card-header">O que é o Hash?</div>
 
-        <form method="post" name="SenhaHash">
+            <div class="card-body">
 
+                <p class="card-text">
+                    O <strong>Hash</strong> é um processo unidirecional (de mão única) que transforma qualquer texto em uma sequência fixa de caracteres. 
+                    Diferente da criptografia comum, o hash <strong>não pode ser revertido</strong> para o texto original, sendo ideal para salvar senhas de forma segura no banco de dados.
+                </p>
+            </div>
+        </div>
+
+        <!-- Formulário -->
+        <form method="post" action="">
             <div class="row g-3 align-items-center">
 
                 <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">senha indecifravel</label>
+                    <label for="inputPassword6" class="col-form-label">Senha indecifrável:</label>
                 </div>
 
                 <div class="col-auto">
-                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="password" id="inputPassword6" name="SenhaHash" class="form-control" required>
                 </div>
 
                 <div class="col-auto">
-                    <span id="passwordHelpInline" class="form-text">
-                        <button class="btn btn-primary" type="submit">Enviar</button>
-                    </span>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
-                
+                <div class="col-12 mt-3">
+                    <?php
+                        if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
+                            $senha = $_POST['SenhaHash'];
+                            $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+                            echo "<strong>Senha criptografada com hash:</strong><br>",($senhaHash);
+                        }
+                    ?>
+                </div>
             </div>
         </form>
     </div>
