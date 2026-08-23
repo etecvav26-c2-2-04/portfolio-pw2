@@ -1,0 +1,34 @@
+body
+{
+  max-width: 100%;
+}
+h6
+{
+  animation: move 10s infinite linear;
+} 
+
+@keyframes move {
+
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+.card {
+  border: 1px solid #383535d2;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 10px 10px rgb(8, 8, 8);
+}
+h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.row{
+  background-color: #fdfbd4;
+  border-radius: 50px;
+}
+.TaNaMesa{
+  background-color: #ffffff;
+}
