@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa PHP</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <?php include 'navBar.php'; ?>
+    <?php include 'includes/header.php'; ?>
 
-            <div class="container mt-4">
+    <div class="container py-4">
+
         <div class="card text-bg-ligth mb-4">
             <div class="card-header">O que é o Sodium?</div>
 
             <div class="card-body">
 
                 <p class="card-text">
-                    O <strong>crypt</strong> é uma função clássica dos sistemas Unix/Linux criada para <strong>proteger senhas</strong>. Ele transforma a senha digitada em um código seguro (<strong>hash</strong>) usando um tempero aleatório (<strong>salt</strong>), permitindo que o sistema valide o login sem precisar guardar a senha original em texto limpo.
-                </div>
+                O <strong>crypt</strong> é uma função clássica dos sistemas Unix/Linux criada para 
+                <strong>proteger senhas</strong>. Ele transforma a senha digitada em um código seguro (<strong>hash</strong>) 
+                usando um tempero aleatório (<strong>salt</strong>), 
+                permitindo que o sistema valide o login sem precisar guardar a senha original em texto limpo.</p>
+
+            </div>
         </div>
 
-             <!-- Formulário -->
         <form method="post" action="">
             <div class="row g-3 align-items-center">
 
@@ -37,17 +44,22 @@
                 <div class="col-auto">
                     <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
-                <div class="col-12 mt-3">
-                    <?php
-                        if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
-                            $senha = $_POST['SenhaHash'];
-                            $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-                            echo "<strong>Senha criptografada com crypt:</strong><br>",($senhaHash);
-                        }
-                    ?>
-                </div>
+
             </div>
         </form>
+
+        <div class="col-12 mt-3">
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
+                    $senha = $_POST['SenhaHash'];
+                    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+                    echo "<strong>Senha criptografada com crypt:</strong><br>",($senhaHash);
+                }
+            ?>
+        </div>
     </div>
+    
+    <?php include 'includes/footer.php'?>
 </body>
 </html>
+
