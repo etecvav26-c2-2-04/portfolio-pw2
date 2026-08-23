@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CriptografiaHash</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,12 +25,11 @@
             </div>
         </div>
 
-        <!-- Formulário -->
         <form method="post" action="">
             <div class="row g-3 align-items-center">
 
                 <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Senha indecifrável:</label>
+                    <label for="inputPassword6" class="col-form-label">Digite a sua senha indecifrável:</label>
                 </div>
 
                 <div class="col-auto">
@@ -38,17 +39,21 @@
                 <div class="col-auto">
                     <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
-                <div class="col-12 mt-3">
-                    <?php
-                        if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
-                            $senha = $_POST['SenhaHash'];
-                            $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-                            echo "<strong>Senha criptografada com hash:</strong><br>",($senhaHash);
-                        }
-                    ?>
-                </div>
             </div>
         </form>
+
+        <div class="col-12 mt-3">
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
+                    $senha = $_POST['SenhaHash'];
+                    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+                    echo "<strong>Senha descriptografada: </strong>", ($senha);
+                    echo "<strong><br> Senha criptografada: </strong>", ($senhaHash);
+                }
+            ?>
+        </div>
     </div>
+
+    <?php include 'includes/footer.php'?>
 </body>
 </html>
