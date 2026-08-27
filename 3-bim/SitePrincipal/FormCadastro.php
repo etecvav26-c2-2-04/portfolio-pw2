@@ -13,42 +13,42 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <form class="row g-3 m-5">
+     <form class="row g-3 m-5" action="/CRUD/cadastro.php">
 
         <div class="col-md-6">
             <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="MariaAntonieta1792@gmail.com" required>
+            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="MariaAntonieta1792@gmail.com" required>
         </div>
 
         <div class="col-md-6">
             <label for="inputPassword" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="inputPassword" required>
+            <input name="senha" type="password" class="form-control" id="inputPassword" required>
         </div>
 
         <div class="col-md-4">
             <label for="inputName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="inputName" required>
+            <input name="nome" type="text" class="form-control" id="inputName" required>
         </div>
 
         <div class="col-md-4">
             <label for="inputCPF" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="inputCPF" placeholder="584.404.728-11" required>
+            <input name="CPF" type="text" class="form-control" id="inputCPF" placeholder="584.404.728-11" required>
         </div>
 
         <div class="col-md-4">
             <label for="inputCelular" class="form-label">Celular (opcional)</label>
-            <input type="tel" class="form-control" id="inputCelular" placeholder="(11) 92876-8977">
+            <input name="Celular" type="tel" class="form-control" id="inputCelular" placeholder="(11) 92876-8977">
         </div>
 
         <div class="col-md-6">
             <label for="inputAddress" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos bobos Nº0" required>
+            <input name="endereco" type="text" class="form-control" id="inputAddress" placeholder="Rua dos bobos Nº0" required>
         </div>
 
         <div class="col-md-3">
             <label for="inputState" class="form-label">Estado</label>
             <select id="inputState" class="form-select" required>
-                <option value="" selected disabled>Escolha...</option>
+                <option value="" selected disabled hidden>Escolha...</option>
                 <option value="AC">AC</option>
                 <option value="AL">AL</option>
                 <option value="AP">AP</option>
