@@ -15,7 +15,7 @@
 <body>
     <div class="float-end">
         <a class="btn btn-primary m-1" href="login.php" role="button">Login</a>
-        <a class="btn btn-primary m-1" href="cadastro.php" role="button"> Cadastro</a>
+        <a class="btn btn-primary m-1" href="FormCadastro.php" role="button"> Cadastro</a>
     </div>
 </body>
 </html>
