@@ -13,7 +13,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-     <form class="row g-3 m-5" action="/CRUD/cadastro.php">
+     <<form class="row g-3 m-5" action="../SitePrincipal/CRUD/cadastro.php" method="post">
 
         <div class="col-md-6">
             <label for="inputEmail" class="form-label">Email</label>
@@ -47,7 +47,7 @@
 
         <div class="col-md-3">
             <label for="inputState" class="form-label">Estado</label>
-            <select id="inputState" class="form-select" required>
+            <select  name="estado" id="inputState" class="form-select" required>
                 <option value="" selected disabled hidden>Escolha...</option>
                 <option value="AC">AC</option>
                 <option value="AL">AL</option>
@@ -81,7 +81,7 @@
         
         <div class="col-md-3">
             <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity" required>
+            <input name="cidade" type="text" class="form-control" id="inputCity" required>
         </div>
 
         <div class="col-12">
