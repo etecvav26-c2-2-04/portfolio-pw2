@@ -22,17 +22,26 @@ CREATE TABLE IF NOT EXISTS Categorias (
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+
 CREATE TABLE IF NOT EXISTS Produtos (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT,
-    tamanho VARCHAR(5),
     cor VARCHAR(30),
     preco DECIMAL(10, 2) NOT NULL,
-    quantidade_estoque INT NOT NULL,
     id_categoria INT,
     data_adicionado DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_categoria) REFERENCES Categorias(id_categoria)
+);
+
+
+CREATE TABLE IF NOT EXISTS Produtos_Tamanhos (
+    id_tamanho INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto INT NOT NULL,
+    tamanho VARCHAR(5) NOT NULL,
+    quantidade_estoque INT NOT NULL DEFAULT 0,
+    UNIQUE KEY uq_produto_tamanho (id_produto, tamanho),
+    FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Pedidos (
@@ -54,3 +63,23 @@ CREATE TABLE IF NOT EXISTS ItensPedido (
     FOREIGN KEY (id_pedido) REFERENCES Pedidos(id_pedido),
     FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto)
 );
+
+
+CREATE TABLE IF NOT EXISTS Carrinho (
+    id_carrinho_item INT AUTO_INCREMENT PRIMARY KEY,
+    sessao_id VARCHAR(100) NOT NULL,
+    id_produto INT NOT NULL,
+    id_tamanho INT NOT NULL,
+    quantidade INT NOT NULL DEFAULT 1,
+    data_adicionado DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto) ON DELETE CASCADE,
+    FOREIGN KEY (id_tamanho) REFERENCES Produtos_Tamanhos(id_tamanho) ON DELETE CASCADE
+);
+
+
+INSERT INTO Categorias (nome_categoria, descricao) VALUES
+    ('Camisetas', 'Camisetas em geral'),
+    ('Calças', 'Calças, jeans e leggings'),
+    ('Vestidos', 'Vestidos casuais e de festa'),
+    ('Blusas', 'Blusas e regatas'),
+    ('Acessórios', 'Bolsas, cintos e afins');
