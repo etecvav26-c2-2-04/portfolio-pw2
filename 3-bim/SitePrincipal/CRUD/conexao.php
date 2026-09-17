@@ -34,7 +34,8 @@
             $stmt->execute();
     
 
-            echo "Cadastro realizado com sucesso!";
+            header('Location: ../Index.php?msg=cadastro_sucesso');
+            exit;
         } catch (PDOException $e) {
             // Tratando erros
             echo "Erro ao cadastrar: " . $e->getMessage();
