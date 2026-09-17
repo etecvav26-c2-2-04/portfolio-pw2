@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
 
     <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
@@ -13,7 +13,9 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-     <<form class="row g-3 m-5" action="../SitePrincipal/CRUD/cadastro.php" method="post">
+    <?php include 'partials/navbar.php'; ?>
+
+    <form class="row g-3 m-5" action="CRUD/conexao.php" method="post">
 
         <div class="col-md-6">
             <label for="inputEmail" class="form-label">Email</label>
