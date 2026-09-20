@@ -1,3 +1,24 @@
+<?php
+    $resultado = '';
+    $mensagem_original = '';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['mensagem']) && !empty($_POST['chave'])) {
+        $mensagem_original = $_POST['mensagem'];
+        $chave = $_POST['chave'];
+        
+        // Método nativo usando OpenSSL (AES-256-CBC)
+        $metodo = "AES-256-CBC";
+        $chave_segura = hash('sha256', $chave, true); // Garante tamanho ideal para a chave
+        $iv_length = openssl_cipher_iv_length($metodo);
+        $iv = openssl_random_pseudo_bytes($iv_length);
+        
+        $dados_criptografados = openssl_encrypt($mensagem_original, $metodo, $chave_segura, 0, $iv);
+        
+        $resultado = base64_encode($iv . $dados_criptografados);
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +83,20 @@
             </form>
         </div>
      </div>
-    
+    <?php if (!empty($resultado)): ?> <!--tratamento de erro, PHP é insuportável -->
+            <div class="card border-success shadow-sm mb-4">
+                <div class="card-header bg-success text-white fw-bold">
+                    <i class="bi bi-check-circle-fill me-2"></i>Resultado da Criptografia
+                </div>
+                <div class="card-body">
+                    <p class="mb-1 text-muted small fw-bold">Texto Criptografado (Base64):</p>
+                    <div class="p-3 bg-light border rounded text-break font-monospace small">
+                        <?= htmlspecialchars($resultado) ?>
+                    </div>
+                </div>
+            </div>
+    <?php endif; ?>
+
     <?php include 'includes/footer.php'?>
 </body>
 </html>
