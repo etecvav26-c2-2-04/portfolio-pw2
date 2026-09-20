@@ -22,9 +22,6 @@
                         <a class="nav-link active" aria-current="page" href="SSL.php">OpenSSL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Sodium.php">Sodium</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="Hash.php">Hash</a>
                     </li>
                     <li class="nav-item">
