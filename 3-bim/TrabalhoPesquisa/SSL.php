@@ -12,48 +12,56 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container mt-4">
+     <div class="container my-4">
 
-        <div class="card text-bg-ligth mb-4">
+        <div class="card bg-body-tertiary border-0 shadow-sm mb-4">
 
-            <div class="card-header">O que é o OpenSSl?</div>
+            <div class="card-header bg-transparent border-0 pt-3 pb-0">
+                <h5 class="card-title fw-bold text-dark mb-0">
+                    <i class="bi bi-shield-lock-fill text-primary"></i>O que é o OpenSSL?
+                </h5>
+            </div>
 
             <div class="card-body">
-
-                <p class="card-text">
-                 O <strong>OpenSSl</strong> funciona como o motor de segurança da internet: implementa os protocolos TLS/SSL para 
-                 <strong>criar conexões seguras (HTTPS)</strong> entre seu navegador e sites, trancando os dados durante o envio, gerando certificados de autenticidade e gerenciando chaves de segurança.
+                <p class="card-text text-secondary mb-0">
+                    O <strong>OpenSSL</strong> funciona como o motor de segurança da internet. Além de implementar os protocolos TLS/SSL para <strong>conexões seguras (HTTPS)</strong>, no PHP ele atua como a principal biblioteca nativa para <strong>criptografar e descriptografar dados sensíveis</strong> (usando algoritmos robustos como AES-256), gerando chaves de segurança e garantindo a integridade das informações.
                 </p>
             </div>
+
         </div>
-
-        <form method="post" action="">
-            <div class="row g-3 align-items-center">
-
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Senha indecifrável:</label>
+        
+        <div class="card-body p-4">
+            <form action="" method="POST">
+                
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label fw-semibold">
+                        <i class="bi bi-chat-left-text me-1"></i>Mensagem Original:
+                    </label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Digite aqui o texto ou senha que deseja proteger..." required></textarea>
                 </div>
 
-                <div class="col-auto">
-                    <input type="password" id="inputPassword6" name="SenhaHash" class="form-control" required>
+
+                <div class="mb-4">
+                    <label for="chave" class="form-label fw-semibold">
+                        <i class="bi bi-key me-1"></i>Chave Secreta:
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-shield-shaded"></i></span>
+                        <input type="password" class="form-control" id="chave" name="chave" placeholder="Sua chave de criptografia" required>
+                    </div>
+                    <div class="form-text">Guarde esta chave. Ela é necessária para recuperar a mensagem original no processo de descriptografia.</div>
                 </div>
 
-                <div class="col-auto">
-                    <button class="btn btn-primary" type="submit">Enviar</button>
+                
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="submit" name="acao" value="criptografar" class="btn btn-dark fw-bold">
+                        <i class="bi bi-shield-lock-fill me-1"></i> Criptografar
+                    </button>
                 </div>
-            </div>
-        </form>
 
-        <div class="col-12 mt-3">
-            <?php
-                if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
-                    $senha = $_POST['SenhaHash'];
-                    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-                    echo "<strong>Senha criptografada com OpenSSL:</strong><br>",($senhaHash);
-                }
-            ?>
+            </form>
         </div>
-    </div>
+     </div>
     
     <?php include 'includes/footer.php'?>
 </body>
