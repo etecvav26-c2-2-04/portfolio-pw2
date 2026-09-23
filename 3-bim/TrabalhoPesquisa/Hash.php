@@ -1,3 +1,10 @@
+<?php
+    $senhaHash = '';
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) 
+    {
+        $senhaHash = password_hash($_POST['SenhaHash'], PASSWORD_DEFAULT);
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,7 +33,7 @@
         </div>
 
         <form method="post" action="">
-            <div class="row g-3 align-items-center">
+            <div class="row g-3 align-items-center mb-4">
 
                 <div class="col-auto">
                     <label for="inputPassword6" class="col-form-label">Digite a sua senha indecifrável:</label>
@@ -42,18 +49,20 @@
             </div>
         </form>
 
-        <div class="col-12 mt-3">
-            <?php
-                if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['SenhaHash'])) {
-                    $senha = $_POST['SenhaHash'];
-                    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-                    echo "<strong>Senha descriptografada: </strong>", ($senha);
-                    echo "<strong><br> Senha criptografada: </strong>", ($senhaHash);
-                }
-            ?>
+        <div class="card border-success shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold">
+                <i class="bi bi-check-circle-fill me-2"></i>Resultado da Criptografia
+            </div>
+            <div class="card-body">
+                <p class="mb-1 text-muted small fw-bold">Texto Criptografado (Hash):</p>
+                <div class="p-3 bg-light border rounded text-break font-monospace small">
+                    <?= htmlspecialchars($senhaHash) ?>
+                </div>
+            </div>
         </div>
     </div>
 
     <?php include 'includes/footer.php'?>
 </body>
 </html>
+
