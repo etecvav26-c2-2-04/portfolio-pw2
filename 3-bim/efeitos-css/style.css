@@ -1,34 +1,57 @@
-body
-{
-  max-width: 100%;
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('https://cdn.dooca.store/1854/products/quadriculado-verde-claro_1600x1600+fill_ffffff.jpeg?v=1618828398');
+  background-size: cover;
+  background-position: center; 
+  overflow-x: hidden;
 }
-h6
-{
+
+h6 {
   animation: move 10s infinite linear;
+  white-space: nowrap;
+  font-weight: bold;
 } 
 
 @keyframes move {
-
-  0% {
-    transform: translateX(-100vw);
+  0% { 
+    transform: translateX(-100vw); 
   }
-  100% {
-    transform: translateX(100vw);
-  }
+  100% 
+  {
+     transform: translateX(100vw); 
+    }
 }
+
+
+.row {
+  background-color: #9ede8b;
+  border-radius: 25px;
+  padding: 25px; 
+  margin-bottom: 20px;
+}
+
+
 .card {
   border: 1px solid #383535d2;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 10px 10px rgb(8, 8, 8);
-}
-h2{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.row{
-  background-color: #fdfbd4;
-  border-radius: 50px;
-}
-.TaNaMesa{
+  transition: all 0.3s ease;
   background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.TaNaMesa {
+  background-color: #ffffff;
+  padding: 5px 0;
 }
