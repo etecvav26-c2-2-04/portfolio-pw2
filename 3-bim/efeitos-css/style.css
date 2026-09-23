@@ -25,10 +25,11 @@ h6 {
 
 
 .row {
-  background-color: #9ede8b;
+  background-color: #75a766;
   border-radius: 25px;
   padding: 25px; 
   margin-bottom: 20px;
+  box-shadow: 0 10px 10px rgb(8, 8, 8);;
 }
 
 
