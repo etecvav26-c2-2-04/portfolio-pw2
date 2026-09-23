@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="col-auto">
-                    <button class="btn btn-primary" type="submit">Enviar</button>
+                    <button class="btn btn-dark" type="submit">Enviar</button>
                 </div>
             </div>
         </form>
