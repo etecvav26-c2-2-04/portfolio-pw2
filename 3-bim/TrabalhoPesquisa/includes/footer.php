@@ -11,7 +11,7 @@
 
 <footer class = "bg-body-tertiary text-center text-lg-start py-3 border-top mt-auto">
     <div class="container text-center">
-        <span class="text-muted">&copy; <?php echo date('Y'); ?> Criptografias. Todos os direitos reservados - João G. S. Carvalho & Poliany C. Souza.</span>
+        <span class="text-muted">&copy; <?php echo date('Y'); ?> Criptografias. Todos os direitos reservados - Gabriel H. Silva, João G. S. Carvalho, Milena K. Trindade, Poliany C. Souza.</span>
     </div>
 </footer>
 </html>
