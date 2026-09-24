@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('../auth.php');
-exigirAdmin(); // Só admin gerencia usuários
+exigirAdmin(); 
 
 require_once('../DataBase/Connection.php');
 

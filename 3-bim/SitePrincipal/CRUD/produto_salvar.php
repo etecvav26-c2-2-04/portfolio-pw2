@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('../auth.php');
-exigirAdmin(); // Só admin gerencia produtos
+exigirAdmin(); 
 
 require_once('../DataBase/Connection.php');
 
@@ -13,14 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cor          = $_POST['cor'] ?? '';
     $preco        = $_POST['preco'];
     $id_categoria = $_POST['id_categoria'];
-    $tamanhos     = $_POST['tamanhos'] ?? [];      // tamanhos marcados, ex: ['P', 'M']
-    $quantidades  = $_POST['quantidade'] ?? [];    // ex: ['P' => '10', 'M' => '5']
+    $tamanhos     = $_POST['tamanhos'] ?? [];      
+    $quantidades  = $_POST['quantidade'] ?? [];    
 
     try {
         $pdo->beginTransaction();
 
         if (!empty($id_produto)) {
-            // UPDATE (edição de um produto existente)
+            
             $sql = "UPDATE Produtos
                     SET nome = :nome, descricao = :descricao, cor = :cor,
                         preco = :preco, id_categoria = :id_categoria
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':id' => $id_produto,
             ]);
         } else {
-            // INSERT (novo produto)
+            
             $sql = "INSERT INTO Produtos (nome, descricao, cor, preco, id_categoria)
                     VALUES (:nome, :descricao, :cor, :preco, :id_categoria)";
             $stmt = $pdo->prepare($sql);
@@ -49,8 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id_produto = $pdo->lastInsertId();
         }
 
-        // Estratégia simples para sincronizar tamanhos: apaga os tamanhos
-        // atuais do produto e recria com o que veio do formulário.
         $del = $pdo->prepare("DELETE FROM Produtos_Tamanhos WHERE id_produto = :id");
         $del->execute([':id' => $id_produto]);
 

@@ -30,14 +30,13 @@
             $stmt->bindParam(':estado', $estado);
             $stmt->bindParam(':cidade', $cidade);
     
-            // Executando a query
             $stmt->execute();
     
 
             header('Location: ../Index.php?msg=cadastro_sucesso');
             exit;
         } catch (PDOException $e) {
-            // Tratando erros
+            
             echo "Erro ao cadastrar: " . $e->getMessage();
         }
     } else {

@@ -5,9 +5,7 @@ exigirLogin(); // Sem login, volta pra login.php
 
 require_once('DataBase/Connection.php');
 
-// Cada usuário logado tem seu próprio carrinho: usamos o id do cliente
-// (em vez do session_id do PHP) como chave na tabela Carrinho, assim o
-// carrinho é dele mesmo se ele sair e entrar de novo depois.
+// Cada usuário tem próprio carrinho,carrinho é dele mesmo se ele sair e entrar de novo depois
 $sessao_id = 'user_' . $_SESSION['usuario_id'];
 
 $stmt = $pdo->prepare("

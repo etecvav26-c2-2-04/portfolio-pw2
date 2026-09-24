@@ -1,13 +1,13 @@
 <?php
 session_start();
 require_once('auth.php');
-exigirAdmin(); // Só admin gerencia produtos
+exigirAdmin(); // só admin
 
 require_once('DataBase/Connection.php');
 
 $id_produto = $_GET['id'] ?? null;
 $produto = null;
-$tamanhosSelecionados = []; // ex: ['P' => 10, 'M' => 5]
+$tamanhosSelecionados = [];
 
 $categorias = $pdo->query("SELECT * FROM Categorias ORDER BY nome_categoria")->fetchAll();
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('auth.php');
-exigirAdmin(); // Só admin passa daqui. Quem não está logado -> login.php. Quem está logado mas não é admin -> Index.php.
+exigirAdmin(); // Só admin
 
 require_once('DataBase/Connection.php');
 

@@ -11,7 +11,7 @@
 
     $options = [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, // Mostra erros detalhados de SQL
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,     // Retorna dados como array associativo ($linha['nome'])
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,     
         PDO::ATTR_EMULATE_PREPARES   => false,                // Usa prepared statements reais contra SQL Injection
     ];
 

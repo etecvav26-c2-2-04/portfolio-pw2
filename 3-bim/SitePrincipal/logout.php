@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Limpa todas as variáveis de sessão e destrói a sessão.
+// Limpa sessão
 $_SESSION = [];
 session_destroy();
 

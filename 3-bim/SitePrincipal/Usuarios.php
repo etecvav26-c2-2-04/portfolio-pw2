@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('auth.php');
-exigirAdmin(); // Só admin vê a lista de usuários
+exigirAdmin(); // só admin
 
 require_once('DataBase/Connection.php');
 

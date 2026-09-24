@@ -1,21 +1,20 @@
 <?php
 session_start();
 require_once('../auth.php');
-exigirLogin(); // Sem login, volta pra login.php
+exigirLogin();
 
 require_once('../DataBase/Connection.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Mesma chave usada em Carrinho.php: o id do usuário logado.
+    
     $sessao_id  = 'user_' . $_SESSION['usuario_id'];
     $id_produto = $_POST['id_produto'];
     $id_tamanho = $_POST['id_tamanho'];
     $quantidade = max(1, (int)$_POST['quantidade']);
 
     try {
-        // Se esse produto/tamanho já está no carrinho dessa sessão,
-        // apenas soma a quantidade em vez de criar uma linha duplicada.
+        
         $stmt = $pdo->prepare(
             "SELECT id_carrinho_item, quantidade FROM Carrinho
              WHERE sessao_id = :sessao AND id_produto = :produto AND id_tamanho = :tamanho"
