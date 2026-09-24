@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS Clientes (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     SenhaHash VARCHAR(255) NOT NULL,
+    is_admin TINYINT(1) NOT NULL DEFAULT 0,
     celular VARCHAR(15),
     endereco VARCHAR(255),
     estado VARCHAR(2),
@@ -83,3 +84,13 @@ INSERT INTO Categorias (nome_categoria, descricao) VALUES
     ('Vestidos', 'Vestidos casuais e de festa'),
     ('Blusas', 'Blusas e regatas'),
     ('Acessórios', 'Bolsas, cintos e afins');
+
+-- Se o banco EntreLinhas já existia ANTES desta atualização (ou seja, a
+-- tabela Clientes já foi criada sem a coluna is_admin), rode a linha abaixo
+-- uma única vez para adicionar a coluna que faltou:
+-- ALTER TABLE Clientes ADD COLUMN IF NOT EXISTS is_admin TINYINT(1) NOT NULL DEFAULT 0;
+
+-- Como criar o primeiro usuário administrador:
+-- 1) Cadastre-se normalmente pelo site (FormCadastro.php).
+-- 2) Rode o comando abaixo trocando o email pelo que você cadastrou:
+-- UPDATE Clientes SET is_admin = 1 WHERE email = 'seuemail@exemplo.com';

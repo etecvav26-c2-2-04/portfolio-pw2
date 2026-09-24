@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once('auth.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,6 +22,10 @@
     <div class="container text-center">
         <?php if (isset($_GET['msg']) && $_GET['msg'] === 'cadastro_sucesso'): ?>
             <div class="alert alert-success">Cadastro realizado com sucesso! Seja bem-vindo(a).</div>
+        <?php endif; ?>
+
+        <?php if (isset($_GET['msg']) && $_GET['msg'] === 'acesso_negado'): ?>
+            <div class="alert alert-danger">Você não tem permissão para acessar essa página.</div>
         <?php endif; ?>
 
         <h1>Bem-vindo(a) à EntreLinhas</h1>

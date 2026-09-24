@@ -1,4 +1,8 @@
 <?php
+session_start();
+require_once('auth.php');
+exigirAdmin(); // Só admin gerencia produtos
+
 require_once('DataBase/Connection.php');
 
 $id_produto = $_GET['id'] ?? null;

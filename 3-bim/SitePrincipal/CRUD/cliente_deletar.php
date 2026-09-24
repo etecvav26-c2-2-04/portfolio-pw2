@@ -1,4 +1,8 @@
 <?php
+session_start();
+require_once('../auth.php');
+exigirAdmin(); // Só admin gerencia usuários
+
 require_once('../DataBase/Connection.php');
 
 if (isset($_GET['id'])) {
